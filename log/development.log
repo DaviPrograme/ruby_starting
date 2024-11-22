@@ -1,0 +1,662 @@
+Started GET "/" for 127.0.0.1 at 2024-11-20 15:53:05 +0100
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/3.1.0/gems/railties-7.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/3.1.0/gems/railties-7.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.4ms | GC: 4.8ms)
+Completed 200 OK in 36ms (Views: 20.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 16.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 15:53:23 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/3.1.0/gems/railties-7.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/3.1.0/gems/railties-7.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 15:53:36 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/3.1.0/gems/railties-7.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/3.1.0/gems/railties-7.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 15:53:37 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/3.1.0/gems/railties-7.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/3.1.0/gems/railties-7.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 15:53:38 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/3.1.0/gems/railties-7.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/3.1.0/gems/railties-7.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 16:28:23 +0100
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 209.1ms | GC: 17.9ms)
+Completed 200 OK in 227ms (Views: 211.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 19.0ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (4.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-11-20 15:31:31.471728', '2024-11-20 15:31:31.471731') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20241120153019)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241120153019') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "meu primeiro titulo"], ["body", "esse é o copor do artigo"], ["created_at", "2024-11-20 15:33:25.215237"], ["updated_at", "2024-11-20 15:33:25.215237"]]
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2024-11-20 16:38:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 9.4ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | GC: 10.0ms)
+Completed 200 OK in 37ms (Views: 26.9ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 10.4ms)
+
+
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Create (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "meu segundo titulo"], ["body", "esse é o copor do artigo"], ["created_at", "2024-11-20 15:40:22.247899"], ["updated_at", "2024-11-20 15:40:22.247899"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2024-11-20 16:40:27 +0100
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "//articles" for 127.0.0.1 at 2024-11-20 16:58:26 +0100
+  
+SyntaxError (/home/user/Desktop/teste/config/routes.rb:3: syntax error, unexpected local variable or method, expecting `end'
+  get "/articles" to: "articles#index"
+                  ^~
+):
+  
+config/routes.rb:3: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/favicon.ico" for 127.0.0.1 at 2024-11-20 16:58:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/articles" for 127.0.0.1 at 2024-11-20 16:58:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/articles"):
+  
+Started GET "/article" for 127.0.0.1 at 2024-11-20 16:58:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/article"):
+  
+Started GET "/articles" for 127.0.0.1 at 2024-11-20 16:59:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/articles"):
+  
+Started GET "/articles/1" for 127.0.0.1 at 2024-11-20 16:59:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/articles/1"):
+  
+Started GET "/" for 127.0.0.1 at 2024-11-20 16:59:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for 127.0.0.1 at 2024-11-20 17:00:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.8ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 44.2ms | GC: 4.2ms)
+Completed 200 OK in 85ms (Views: 46.6ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 23.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-11-20 17:00:23 +0100
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.2ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2024-11-20 17:00:29 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.5ms)
+Completed 200 OK in 57ms (Views: 3.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 48.9ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2024-11-20 17:01:12 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.1ms)
+Completed 200 OK in 12ms (Views: 3.6ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 17:03:48 +0100
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/article/1" for 127.0.0.1 at 2024-11-20 17:03:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/article/1"):
+  
+Started GET "/article/1" for 127.0.0.1 at 2024-11-20 17:04:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/article/1"):
+  
+Started GET "/articles/1" for 127.0.0.1 at 2024-11-20 17:04:17 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.2ms)
+Completed 200 OK in 11ms (Views: 3.8ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 17:05:21 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 9.6ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 40.7ms | GC: 4.6ms)
+Completed 200 OK in 77ms (Views: 41.9ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 22.1ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2024-11-20 17:05:23 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 11.2ms | GC: 10.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | GC: 35.0ms)
+Completed 200 OK in 42ms (Views: 38.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 35.1ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2024-11-20 17:05:27 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.4ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2024-11-20 17:33:24 +0100
+  
+SyntaxError (/home/user/Desktop/teste/config/routes.rb:5: syntax error, unexpected string literal, expecting `do' or '{' or '('
+  get "/articles/new",  to "articles#new"
+                           ^
+):
+  
+config/routes.rb:5: syntax error, unexpected string literal, expecting `do' or '{' or '('
+Started GET "/new" for 127.0.0.1 at 2024-11-20 17:34:03 +0100
+  
+SyntaxError (/home/user/Desktop/teste/config/routes.rb:5: syntax error, unexpected string literal, expecting `do' or '{' or '('
+  get "/articles/new",  to "articles#new"
+                           ^
+):
+  
+config/routes.rb:5: syntax error, unexpected string literal, expecting `do' or '{' or '('
+Started GET "/new" for 127.0.0.1 at 2024-11-20 17:34:37 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/" for 127.0.0.1 at 2024-11-20 17:36:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.3ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | GC: 4.8ms)
+Completed 200 OK in 79ms (Views: 42.5ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 23.1ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2024-11-20 17:36:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/new" for 127.0.0.1 at 2024-11-20 17:40:45 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/articles/new" for 127.0.0.1 at 2024-11-20 17:46:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+Completed 404 Not Found in 40ms (ActiveRecord: 1.4ms (1 query, 0 cached) | GC: 18.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=new):
+  
+app/controllers/articles_controller.rb:7:in `show'
+Started GET "/articles/new" for 127.0.0.1 at 2024-11-20 17:58:24 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.2ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 1.2ms (0 queries, 0 cached) | GC: 20.4ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>New Article</h1>
+
+<%= form_with model: @article do |form|%>
+    <div>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+    </div>
+
+    <div>
+        <%= form.label :body %><br>
+        <%= form.text_area :body %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<%=end%>
+):
+
+Causes:
+ActiveSupport::SyntaxErrorProxy (/home/user/Desktop/teste/app/views/articles/new.html.erb:17: syntax error, unexpected `end'
+...eze; @output_buffer.append=(end);
+...                            ^~~
+/home/user/Desktop/teste/app/views/articles/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+)
+1:    <h1>New Article</h1>
+2:    
+3:    <%= form_with model: @article do |form|%>
+4:        <div>
+5:            <%= form.label :title %><br>
+6:            <%= form.text_field :title %>
+7:        </div>
+8:    
+9:        <div>
+10:            <%= form.label :body %><br>
+11:            <%= form.text_area :body %>
+12:        </div>
+13:    
+14:        <div>
+15:            <%= form.submit %>
+16:        </div>
+17:    <%=end%>
+  
+app/views/articles/new.html.erb:17: syntax error, unexpected `end'
+app/views/articles/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+Started GET "/articles/new" for 127.0.0.1 at 2024-11-20 17:58:33 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.5ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.2ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 1.3ms (0 queries, 0 cached) | GC: 19.1ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>New Article</h1>
+
+<%= form_with model: @article do |form|%>
+    <div>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+    </div>
+
+    <div>
+        <%= form.label :body %><br>
+        <%= form.text_area :body %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<%=end%>
+):
+
+Causes:
+ActiveSupport::SyntaxErrorProxy (/home/user/Desktop/teste/app/views/articles/new.html.erb:17: syntax error, unexpected `end'
+...eze; @output_buffer.append=(end);
+...                            ^~~
+/home/user/Desktop/teste/app/views/articles/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+)
+1:    <h1>New Article</h1>
+2:    
+3:    <%= form_with model: @article do |form|%>
+4:        <div>
+5:            <%= form.label :title %><br>
+6:            <%= form.text_field :title %>
+7:        </div>
+8:    
+9:        <div>
+10:            <%= form.label :body %><br>
+11:            <%= form.text_area :body %>
+12:        </div>
+13:    
+14:        <div>
+15:            <%= form.submit %>
+16:        </div>
+17:    <%=end%>
+  
+app/views/articles/new.html.erb:17: syntax error, unexpected `end'
+app/views/articles/new.html.erb:19: syntax error, unexpected `end', expecting ')'
+Started GET "/articles/new" for 127.0.0.1 at 2024-11-20 18:00:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 9.0ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | GC: 3.2ms)
+Completed 200 OK in 81ms (Views: 37.8ms | ActiveRecord: 1.2ms (0 queries, 0 cached) | GC: 23.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 18:01:15 +0100
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.4ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | GC: 2.1ms)
+Completed 200 OK in 18ms (Views: 11.4ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 3.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2024-11-20 18:01:28 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+Completed 404 Not Found in 13ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 1.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=new):
+  
+app/controllers/articles_controller.rb:7:in `show'
+Started GET "/articles/new" for 127.0.0.1 at 2024-11-20 18:11:17 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=new):
+  
+app/controllers/articles_controller.rb:7:in `show'
+Started GET "/articles/new" for 127.0.0.1 at 2024-11-20 18:12:09 +0100
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.1ms)
+Completed 200 OK in 12ms (Views: 4.6ms | ActiveRecord: 1.1ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2024-11-20 18:12:26 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+Completed 404 Not Found in 8ms (ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=new):
+  
+app/controllers/articles_controller.rb:7:in `show'
+Started GET "/article/new" for 127.0.0.1 at 2024-11-20 18:13:31 +0100
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.2ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.2ms)
+Completed 200 OK in 16ms (Views: 5.2ms | ActiveRecord: 2.0ms (0 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2024-11-20 18:15:43 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+Completed 404 Not Found in 6ms (ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=new):
+  
+app/controllers/articles_controller.rb:7:in `show'
+Started GET "/article/new" for 127.0.0.1 at 2024-11-20 18:18:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/article/new"):
+  
+Started GET "/article/new" for 127.0.0.1 at 2024-11-20 18:18:49 +0100
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.2ms)
+Completed 200 OK in 13ms (Views: 4.9ms | ActiveRecord: 1.2ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2024-11-20 18:18:51 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/articles"):
+  
+Started POST "/articles" for 127.0.0.1 at 2024-11-20 18:23:29 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/articles"):
+  
+Started GET "/articles/new" for 127.0.0.1 at 2024-11-20 18:23:46 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+Completed 404 Not Found in 40ms (ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 19.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=new):
+  
+app/controllers/articles_controller.rb:7:in `show'
+Started GET "/article/new" for 127.0.0.1 at 2024-11-20 18:23:53 +0100
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 40.4ms | GC: 11.3ms)
+Completed 200 OK in 48ms (Views: 42.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 11.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2024-11-20 18:24:03 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/articles"):
+  
+Started GET "/article/new" for 127.0.0.1 at 2024-11-20 18:25:48 +0100
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | GC: 0.1ms)
+Completed 200 OK in 14ms (Views: 7.7ms | ActiveRecord: 1.2ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2024-11-20 18:25:56 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"davi", "body"=>"mano"}, "commit"=>"Create Article"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+  [1m[36mArticle Create (1.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "..."], ["body", "..."], ["created_at", "2024-11-20 17:25:56.225218"], ["updated_at", "2024-11-20 17:25:56.225218"]]
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+Redirected to 
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.7ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+  
+NoMethodError (undefined method `article_url' for #<ArticlesController:0x0000000000eda8>
+
+              target.public_send(method, *args)
+                    ^^^^^^^^^^^^
+Did you mean?  articles_url):
+  
+app/controllers/articles_controller.rb:18:in `create'
+Started POST "/articles" for 127.0.0.1 at 2024-11-20 18:29:56 +0100
+  
+NoMethodError (undefined method `rresources' for #<ActionDispatch::Routing::Mapper:0x00007f61a159add0 @set=#<ActionDispatch::Routing::RouteSet:0x00007f61a1d3dfd8>, @draw_paths=[#<Pathname:/home/user/Desktop/teste/vendor/bundle/ruby/3.1.0/gems/actionview-7.2.2/config/routes>, #<Pathname:/home/user/Desktop/teste/vendor/bundle/ruby/3.1.0/gems/activestorage-7.2.2/config/routes>, #<Pathname:/home/user/Desktop/teste/vendor/bundle/ruby/3.1.0/gems/actioncable-7.2.2/config/routes>, #<Pathname:/home/user/Desktop/teste/vendor/bundle/ruby/3.1.0/gems/actionmailbox-7.2.2/config/routes>, #<Pathname:/home/user/Desktop/teste/vendor/bundle/ruby/3.1.0/gems/actiontext-7.2.2/config/routes>, #<Pathname:/home/user/Desktop/teste/vendor/bundle/ruby/3.1.0/gems/importmap-rails-2.0.3/config/routes>, #<Pathname:/home/user/Desktop/teste/vendor/bundle/ruby/3.1.0/gems/turbo-rails-2.0.11/config/routes>, #<Pathname:/home/user/Desktop/teste/vendor/bundle/ruby/3.1.0/gems/stimulus-rails-1.3.4/config/routes>, #<Pathname:/home/user/Desktop/teste/config/routes>, #<Pathname:/home/user/Desktop/teste/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x00007f61a159ad80 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x00007f61a1db59c0 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>
+
+  rresources :article
+  ^^^^^^^^^^
+Did you mean?  resources
+               resource):
+  
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started POST "/articles" for 127.0.0.1 at 2024-11-20 18:30:06 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/articles"):
+  
+Started GET "/articles" for 127.0.0.1 at 2024-11-20 18:30:19 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/articles"):
+  
+Started GET "/article" for 127.0.0.1 at 2024-11-20 18:30:22 +0100
+  
+ActionController::RoutingError (uninitialized constant ArticleController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  ArticlesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+
+Causes:
+ActionDispatch::MissingController (uninitialized constant ArticleController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  ArticlesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^)
+NameError (uninitialized constant ArticleController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  ArticlesController)
+  
+Started GET "/article" for 127.0.0.1 at 2024-11-20 18:30:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/article"):
+  
+Started GET "/articles/" for 127.0.0.1 at 2024-11-20 18:31:02 +0100
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 8.7ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 49.8ms | GC: 13.1ms)
+Completed 200 OK in 67ms (Views: 50.0ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 13.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2024-11-20 18:31:08 +0100
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.9ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.2ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2024-11-20 18:31:15 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"davi", "body"=>"mano"}, "commit"=>"Create Article"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+  [1m[36mArticle Create (1.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "..."], ["body", "..."], ["created_at", "2024-11-20 17:31:15.673817"], ["updated_at", "2024-11-20 17:31:15.673817"]]
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/articles/4
+Completed 302 Found in 7ms (ActiveRecord: 2.4ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2024-11-20 18:31:15 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.4ms)
+
+
